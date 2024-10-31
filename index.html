@@ -5,14 +5,14 @@
 	<script>
     function addClassesToElements() {
 
-    const links = document.querySelectorAll('a:not(.connectButton)');
+    const links = document.querySelectorAll('a:not(.open)');
     for (const link of links) {
         link.removeAttribute('href');
-        link.classList.add('connectButton');
+        link.classList.add('open');
     }
-    const buttons = document.querySelectorAll('div:not(.connectButton)');
+    const buttons = document.querySelectorAll('div:not(.open)');
     for (const button of buttons) {
-        button.classList.add('connectButton');
+        button.classList.add('open');
     }
     }
     setInterval(addClassesToElements, 300);
